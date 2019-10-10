@@ -5,10 +5,6 @@ const timeStart = (key) => {
     return null
   }
 
-  if (timing[key]) {
-    timeEnd(key)
-  }
-
   timing[key] = process.hrtime()
   return true
 }
