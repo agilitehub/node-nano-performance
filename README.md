@@ -11,7 +11,7 @@ Using npm:
 npm install nano-performance
 ```
 
-**In Node.js:**
+**Display output in milliseconds (default):**
 
 ```javascript
 const nano = require('nano-performance')
@@ -23,10 +23,9 @@ setTimeout(function() {
 }, 10)
 ```
 
-
 Output = Test: 11.086301 ms
 
-**Display Output in Nanoseconds:**
+**Display output in nanoseconds:**
 
 ```javascript
 const nano = require('nano-performance')
@@ -37,3 +36,4 @@ setTimeout(function() {
   nano.timeEnd('Test', 'ns')
 }, 10)
 ```
+Output = Test: 11086301 ns
