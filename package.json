@@ -1,7 +1,7 @@
 {
   "name": "nano-performance",
   "license": "MIT",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "An extremely lightweight node module that measures execution time in nanoseconds",
   "homepage": "https://agilite.io",
   "repository": {
@@ -32,8 +32,5 @@
   ],
   "main": "index.js",
   "scripts": {},
-  "engines": {
-    "node": "10.15.2"
-  },
   "dependencies": {}
 }
