@@ -1,24 +1,16 @@
 const timing = {}
 
 const timeStart = (key) => {
-  if (!key) {
-    return null
-  }
-
+  if (!key) return null
   timing[key] = process.hrtime()
   return true
 }
 
 const timeEnd = (key, format = 'ms') => {
-  if (!key) {
-    return null
-  }
+  if (!key) return null
 
   const hrStart = timing[key]
-
-  if (!hrStart) {
-    return null
-  }
+  if (!hrStart) return null
 
   let formatValue = 1000000
 
