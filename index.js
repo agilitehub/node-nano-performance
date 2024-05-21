@@ -1,35 +1,36 @@
-const timing = {}
+const { performance, PerformanceObserver } = require("perf_hooks");
+
+const timing = {};
 
 const timeStart = (key) => {
-  if (!key) return null
-  timing[key] = process.hrtime()
-  return true
-}
+  if (!key) return null;
+  timing[key] = performance.now();
+  return true;
+};
 
-const timeEnd = (key, format = 'ms') => {
-  if (!key) return null
+const timeEnd = (key, format = "ms") => {
+  if (!key) return null;
 
-  const hrStart = timing[key]
-  if (!hrStart) return null
+  const start = timing[key];
+  if (!start) return null;
 
-  let formatValue = 1000000
+  let formatValue = 1000;
 
   switch (format.toLowerCase()) {
-    case 'ns':
-      formatValue = 1
-      break
+    case "ns":
+      formatValue = 1;
+      break;
   }
 
-  const NS_PER_SEC = 1e9
-  const hrEnd = (process.hrtime(hrStart))
-  const result = (hrEnd[0] * NS_PER_SEC + hrEnd[1]) / formatValue
+  const end = performance.now();
+  const result = (end - start) / formatValue;
 
-  console.log(`${key}: ${result} ${format}`)
-  delete timing[key]
+  console.log(`${key}: ${result} ${format}`);
+  delete timing[key];
 
-  return true
-}
+  return true;
+};
 
 // EXPORTS
-exports.timeStart = timeStart
-exports.timeEnd = timeEnd
+exports.timeStart = timeStart;
+exports.timeEnd = timeEnd;

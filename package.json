@@ -1,25 +1,15 @@
 {
   "name": "nano-performance",
-  "license": "MIT",
-  "version": "0.0.7",
+  "version": "1.0.0",
   "description": "An extremely lightweight node module that measures execution time in nanoseconds",
-  "homepage": "https://agilite.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/agilitehub/node-nano-performance"
   },
-  "bugs": {
-    "url": "https://github.com/agilitehub/node-nano-performance/issues",
-    "email": "support@agilite.io"
-  },
-  "author": "Agilit-e",
-  "contributors": [
-    {
-      "name": "John Jardin",
-      "email": "support@agilite.io",
-      "url": "https://agilite.io"
-    }
-  ],
   "keywords": [
     "agilit-e",
     "agilite",
@@ -30,7 +20,23 @@
     "nanoseconds",
     "execution speed"
   ],
-  "main": "index.js",
-  "scripts": {},
-  "dependencies": {}
+  "author": "Agilit-e",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/agilitehub/node-nano-performance/issues",
+    "email": "support@agilite.io"
+  },
+  "homepage": "https://agilite.io",
+  "engines": {
+    "node": ">=8.5.0"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "contributors": [
+    {
+      "name": "John Jardin",
+      "email": "support@agilite.io",
+      "url": "https://agilite.io"
+    }
+  ]
 }
