@@ -1,10 +1,11 @@
 {
   "name": "nano-performance",
-  "version": "1.0.0",
+  "version": "1.0.1-rc-1",
   "description": "An extremely lightweight node module that measures execution time in nanoseconds",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -30,8 +31,10 @@
   "engines": {
     "node": ">=8.5.0"
   },
-  "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^5.1.1",
+    "mocha": "^10.4.0"
+  },
   "contributors": [
     {
       "name": "John Jardin",

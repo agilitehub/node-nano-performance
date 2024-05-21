@@ -1,14 +1,14 @@
-const { performance, PerformanceObserver } = require("perf_hooks");
+import { performance, PerformanceObserver } from "perf_hooks";
 
 const timing = {};
 
-const timeStart = (key) => {
+export const timeStart = (key) => {
   if (!key) return null;
   timing[key] = performance.now();
   return true;
 };
 
-const timeEnd = (key, format = "ms") => {
+export const timeEnd = (key, format = "ms") => {
   if (!key) return null;
 
   const start = timing[key];
@@ -30,7 +30,3 @@ const timeEnd = (key, format = "ms") => {
 
   return true;
 };
-
-// EXPORTS
-exports.timeStart = timeStart;
-exports.timeEnd = timeEnd;
