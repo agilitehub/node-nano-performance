@@ -2,10 +2,11 @@
   "name": "nano-performance",
   "version": "1.0.1-rc-2",
   "description": "An extremely lightweight node module that measures execution time in nanoseconds",
-  "main": "index.js",
-  "type": "module",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --reporter mochawesome",
+    "build": "npx prettier --write . && tsc",
+    "deploy": "npx prettier --check . && tsc && npm publish"
   },
   "repository": {
     "type": "git",
@@ -32,8 +33,13 @@
     "node": ">=8.5.0"
   },
   "devDependencies": {
-    "chai": "^5.1.1",
-    "mocha": "^10.4.0"
+    "@types/node": "^20.12.12",
+    "chai": "5.1.1",
+    "eslint": "9.3.0",
+    "mocha": "10.4.0",
+    "mochawesome": "7.1.3",
+    "prettier": "3.2.5",
+    "typescript": "5.4.5"
   },
   "contributors": [
     {
