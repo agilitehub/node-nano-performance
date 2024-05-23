@@ -2,13 +2,13 @@ import { performance, PerformanceObserver } from 'perf_hooks'
 
 const timing = {}
 
-export const timeStart = (key) => {
+const timeStart = (key) => {
   if (!key) return null
   timing[key] = performance.now()
   return true
 }
 
-export const timeEnd = (key, format = 'ms') => {
+const timeEnd = (key, format = 'ms') => {
   if (!key) return null
 
   const start = timing[key]
@@ -29,4 +29,9 @@ export const timeEnd = (key, format = 'ms') => {
   delete timing[key]
 
   return true
+}
+
+export default {
+  timeStart,
+  timeEnd
 }
