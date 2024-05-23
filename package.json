@@ -1,6 +1,6 @@
 {
   "name": "nano-performance",
-  "version": "1.0.1-rc-2",
+  "version": "1.0.1-rc-4",
   "description": "An extremely lightweight node module that measures execution time in nanoseconds",
   "main": "dist/index.js",
   "scripts": {
