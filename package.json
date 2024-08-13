@@ -1,6 +1,6 @@
 {
   "name": "nano-performance",
-  "version": "1.0.1-rc-5",
+  "version": "1.0.1",
   "description": "An extremely lightweight node module that measures execution time in nanoseconds",
   "main": "dist/index.js",
   "scripts": {
@@ -33,13 +33,13 @@
     "node": ">=8.5.0"
   },
   "devDependencies": {
-    "@types/node": "^20.12.12",
+    "@types/node": "22.2.0",
     "chai": "5.1.1",
-    "eslint": "9.3.0",
-    "mocha": "10.4.0",
+    "eslint": "9.9.0",
+    "mocha": "10.7.3",
     "mochawesome": "7.1.3",
-    "prettier": "3.2.5",
-    "typescript": "5.4.5"
+    "prettier": "3.3.3",
+    "typescript": "5.5.4"
   },
   "contributors": [
     {
